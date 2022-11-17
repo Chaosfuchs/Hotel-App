@@ -8,6 +8,7 @@ import { Bookings } from '../mock-bookings';
   styleUrls: ['./bookings.component.css']
 })
 export class BookingsComponent implements OnInit {
+  booking: any;
 
   constructor() { }
 
@@ -16,4 +17,8 @@ export class BookingsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  delete(booking: Booking): void {
+    var index = Bookings.indexOf(booking);
+    this.bookings.splice(index, 1)
+  }
 }
