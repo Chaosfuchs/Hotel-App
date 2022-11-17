@@ -1,6 +1,6 @@
 <div class="list-group" *ngFor="let booking of bookings">
   <a
-    href="#"
+    routerLink="/edit/{{ booking.id }}"
     class="mb-3 list-group-item list-group-item-action"
     aria-current="true"
   >
