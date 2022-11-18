@@ -29,12 +29,24 @@
           <label class="form-label">Guest Name</label>
           <input type="text" formControlName="name" class="form-control" />
           <div class="row mb-2">
-            <div class="col">
+            <div
+              *ngIf="
+                bookingForm.invalid &&
+                (bookingForm.touched || bookingForm.dirty)
+              "
+              class="col"
+            >
               <div
                 *ngIf="bookingForm.get('name')?.hasError('minlength')"
                 class="text text-warning"
               >
                 *Name is too short
+              </div>
+              <div
+                *ngIf="bookingForm.get('name')?.hasError('required')"
+                class="text text-warning"
+              >
+                *Name is required
               </div>
             </div>
           </div>
