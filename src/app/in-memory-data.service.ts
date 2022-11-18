@@ -33,7 +33,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 4,
         name: "Luzifer",
-        roomNumber: 66,
+        roomNumber: 666,
         startDate: new Date(),
         endDate: new Date("2022-12-31"),
       },
